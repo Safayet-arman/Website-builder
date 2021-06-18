@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script src="js/JQuery3.3.1.js"></script>
+    <script src="js/lightslider.js"></script>
+    <!--js-link-------------->
+
+
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 
 </head>
@@ -35,5 +41,78 @@
             <i class="fas fa-search"></i>
         </div>
     </nav>
+    <section id ="main">
+        <!--showcase------------------>
+        <!--heasing------------->
+        <h1 class="Showcase-heading"></h1>
+        <ul id="autoWidth" class="cs-hidden">
+            <!--box-1------------>
+
+            <li class="item-a">
+                 <!--showcase-box------------------->
+        <div class="showcase-box">
+            <img src="images/godzilla1.jpg">
+        </div> 
+            </li>
+
+            <!--box-2------------>
+
+            <li class="item-b">
+                 <!--showcase-box------------------->
+        <div class="showcase-box">
+            <img src="images/starwars.jpg">
+        </div> 
+            </li>
+            <!--box-3------------>
+
+            <li class="item-c">
+                <!--showcase-box------------------->
+       <div class="showcase-box"> 
+           <img src="images/bab.jpg">
+       </div> 
+           </li>
+
+          </ul>
+       
+    </section>
+     <!--latest-movies---------------->
+     <section id="latest">
+     <h2 class="latest-heading">Latest Movies </h2> 
+     <!--slider---------------------------->
+       
+     <ul id="autoWidth" class="cs-hidden">
+         <!--slide-box-1---------------------->
+        <li class="item-a">
+            <div class="latest-box">
+                <!--img-------------->
+
+                <div class="latest-b-img"> 
+                   <img src="images/m-1.jpg"> 
+                </div>
+                <!--text------------>
+            </div class="latest-b-text">
+            <strong>Kin 2018</strong>
+            <p>Action Movie </p>
+        </div>
+
+            </div>
+        </li>
+        
+      </ul>
+     </section>
+    <!--slider-script---------------->
+    
+
+    <script>
+        $(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+  });
+    </script>
 </body>
 </html>
